@@ -26,7 +26,7 @@ A robust TypeScript backend for a live-social e-commerce and social media app fe
 
 Create a `.env` file in the project root with:
 
-```env
+```env```
 DB_HOST=localhost
 DB_PORT=5432
 DB_USER=postgres
@@ -36,18 +36,19 @@ HF_API_KEY=your_huggingface_api_key_here
 CROSS_ENCODER_API=http://localhost:8000/cross-encoder
 PORT=3000
 
-Install Dependencies
+## Install Dependencies
 
-npm install
+`npm install`
 
-Run Development Server
+## Run Development Server
 
-npm run dev
+`npm run dev`
 
-Build and Run Production Server
+## Build and Run Production Server
 
-npm run build
-npm start
+`npm run build`
+
+`npm start`
 
 Run with Docker
 
