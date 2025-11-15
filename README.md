@@ -35,3 +35,56 @@ DB_NAME=live_social
 HF_API_KEY=your_huggingface_api_key_here
 CROSS_ENCODER_API=http://localhost:8000/cross-encoder
 PORT=3000
+
+Install Dependencies
+
+npm install
+
+Run Development Server
+
+npm run dev
+
+Build and Run Production Server
+
+npm run build
+npm start
+
+Run with Docker
+
+docker build -t live-social-backend .
+docker run -p 3000:3000 --env-file .env live-social-backend
+
+
+---
+
+API Endpoints
+
+GET /api/search?q=your+query&k=12 — Search videos semantically and lexically
+
+GET /api/feed?userId=1&k=12 — Get personalized feed recommendations
+
+
+
+---
+
+Notes
+
+FAISS index must be populated with video embeddings for search and feed to work effectively.
+
+ASR lattice data should be extracted and stored in Segment entities for lexical recall.
+
+Cross-encoder API should accept JSON with { inputs: [[query, segmentText]] } and return relevance scores.
+
+The embedding service currently uses Hugging Face API; you can replace with a local transformer model for performance.
+
+
+
+---
+
+License
+
+MIT License
+
+---
+
+This completes the robust TypeScript backend setup for your live-social app with advanced search and feed ranking.
