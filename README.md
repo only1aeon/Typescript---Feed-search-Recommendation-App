@@ -50,42 +50,21 @@ PORT=3000
 
 `npm start`
 
-Run with Docker
+## Run with Docker
 
-docker build -t live-social-backend .
-docker run -p 3000:3000 --env-file .env live-social-backend
+`docker build -t live-social-backend .`
 
+`docker run -p 3000:3000 --env-file .env live-social-backend`
 
----
+## API Endpoints
 
-API Endpoints
+`GET /api/search?q=your+query&k=12` — Search videos semantically and lexically
 
-GET /api/search?q=your+query&k=12 — Search videos semantically and lexically
+`GET /api/feed?userId=1&k=12` — Get personalized feed recommendations
 
-GET /api/feed?userId=1&k=12 — Get personalized feed recommendations
+## Notes
 
-
-
----
-
-Notes
-
-FAISS index must be populated with video embeddings for search and feed to work effectively.
-
-ASR lattice data should be extracted and stored in Segment entities for lexical recall.
-
-Cross-encoder API should accept JSON with { inputs: [[query, segmentText]] } and return relevance scores.
-
-The embedding service currently uses Hugging Face API; you can replace with a local transformer model for performance.
-
-
-
----
-
-License
-
-MIT License
-
----
-
-This completes the robust TypeScript backend setup for your live-social app with advanced search and feed ranking.
+- FAISS index must be populated with video embeddings for search and feed to work effectively.
+- ASR lattice data should be extracted and stored in Segment entities for lexical recall.
+- Cross-encoder API should accept JSON with { inputs: [[query, segmentText]] } and return relevance scores.
+- The embedding service currently uses Hugging Face API; you can replace with a local transformer model for performance.
