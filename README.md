@@ -26,7 +26,7 @@ A robust TypeScript backend for a live-social e-commerce and social media app fe
 
 Create a `.env` file in the project root with:
 
-```env```
+```env
 DB_HOST=localhost
 DB_PORT=5432
 DB_USER=postgres
