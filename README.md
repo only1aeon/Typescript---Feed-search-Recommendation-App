@@ -39,7 +39,9 @@ PORT=3000
 
 ## Install Dependencies
 
-`npm install`
+```bash
+npm install
+```
 
 ## Run Development Server
 
@@ -56,9 +58,10 @@ npm start
 
 ## Run with Docker
 
-`docker build -t live-social-backend .`
-
-`docker run -p 3000:3000 --env-file .env live-social-backend`
+```docker
+docker build -t live-social-backend .
+docker run -p 3000:3000 --env-file .env live-social-backend
+```
 
 ## API Endpoints
 
