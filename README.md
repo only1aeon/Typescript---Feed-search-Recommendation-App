@@ -43,13 +43,16 @@ PORT=3000
 
 ## Run Development Server
 
-`npm run dev`
+```bash
+npm run dev
+```
 
 ## Build and Run Production Server
 
-`npm run build`
-
-`npm start`
+```bash
+npm run build
+npm start
+```
 
 ## Run with Docker
 
